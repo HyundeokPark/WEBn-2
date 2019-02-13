@@ -2,15 +2,41 @@
 <html>
   <head>
     <meta charset="utf-8">
+
     <title></title>
   </head>
 
   <body>
-  <h1>JavaScript</h1>
+
+    <input id="nightbutton" type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+    ">
+    <input id = "daybutton" type="button" value="day" onclick="document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';">
+
+<span id = "first" class ="js">JavaScript</span>
+
+<input id="night-day" type="button" value="night" onclick="
+if(document.querySelector('#night-day').value === 'night') {
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    document.querySelector('#night-day').value = 'day';
+  }
+else {
+    document.querySelector('body').style.backgroundColor ='white';
+    document.querySelector('body').style.color ='black';
+    document.querySelector('#night-day').value = 'night';
+  }
+">
+
+
     <script>
         document.write(1+1);
     </script>
+
  <h1>html</h1>
+
  1+1
 
   </body>
