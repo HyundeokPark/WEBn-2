@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input id="night-day" type="button" value="night" onclick="
+      var select = document.querySelector('body');
+      var j =0;
+     if(this.value === 'night') {
+          select.style.backgroundColor = 'black';
+          select.style.color = 'white';
+          this.value = 'day';
+          var select = document.querySelector('body');
+          var alist = document.querySelectorAll('a');
+          while(j < alist.length){
+          alist[j].style.color = 'powderblue';
+          j++;}
+        }
+      else {
+          select.style.backgroundColor ='white';
+          select.style.color ='black';
+          this.value = 'night';
+          var select = document.querySelector('body');
+          var alist = document.querySelectorAll('a');
+          while(j < alist.length){
+          alist[j].style.color = 'blue';
+          j++;}
+        }
+      ">
+
+
+    <h1>loop & array</h1>
+    <script>
+      var coworkers = ['lee', 'phd', 'kim' ,'kan','kang','han','son','min'];
+    </script>
+    <h2>co workers</h2>
+    <ul>
+    <script>
+      var i =0;
+      while(i < coworkers.length){
+      document.write('<li><a href = "https://hpotter300.github.io/WEBn-1/"> '+ coworkers[i] + '</li>');
+      i++;
+      }
+    </script>
+    </ul>
+
+
+  </body>
+  </html>
