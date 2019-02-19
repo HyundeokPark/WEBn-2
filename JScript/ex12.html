@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+      function lnikSetColor(color){
+        var j =0;
+        var select = document.querySelector('body');
+        var alist = document.querySelectorAll('a');
+        while(j < alist.length){
+        alist[j].style.color = color;
+        j++;}
+      }
+
+      function bodySetColor(color){
+        document.querySelector('body').style.color = color;
+      }
+
+      function nightDay(self){
+      var select = document.querySelector('body');
+
+     if(self.value === 'night') {
+          select.style.backgroundColor = 'black';
+          //select.style.color = 'white';
+          bodySetColor('white');
+
+          self.value = 'day';
+          linkSetColor('powderblue');
+        }
+      else {
+          select.style.backgroundColor ='white';
+              bodySetColor('black');
+          self.value = 'night';
+          linkSetColor('blue');
+        }
+      }
+    </script>
+  </head>
+  <body>
+
+
+    <input id="night-day" type="button" value="night" onclick="
+          nightDay(this);
+      ">
+
+
+    <h1>loop & array</h1>
+    <script>
+      var coworkers = ['lee', 'phd', 'kim' ,'kan','kang','han','son','min'];
+    </script>
+    <h2>co workers</h2>
+    <ul>
+    <script>
+      var i =0;
+      while(i < coworkers.length){
+      document.write('<li><a href = "https://hpotter300.github.io/WEBn-1/"> '+ coworkers[i] + '</li>');
+      i++;
+      }
+    </script>
+    </ul>
+
+
+  </body>
+
+  </html>
