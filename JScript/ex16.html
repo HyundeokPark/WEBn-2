@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>
+  <body>
+    <h1>Object</h1>
+    <h1>Create</h1>
+    <script>
+      var coworkers = {
+        "pro" : "phd",
+        "ama" : "hui"
+      };
+
+      document.write('<h2>Properties & Method</h2>');
+
+      coworkers.showAll = function(){
+        for( var key in this){
+          if(key == 'showAll'){
+            continue;
+          }
+          document.write(key+"<br>");
+          document.write("key :" + key + " cowokers[key] : " + this[key] +"<br>");
+        }
+      }
+      document.write(coworkers.showAll());
+    </script>
+
+
+  </body>
+
+  </html>
