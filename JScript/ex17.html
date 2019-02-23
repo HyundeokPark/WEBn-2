@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+      var Body = {
+
+        SetColor:function(color){
+              document.querySelector('body').style.color = color;
+        },
+
+        SetBackgroundColor : function(color){
+          var select = document.querySelector('body');
+          select.style.backgroundColor = color;
+        }
+      }
+
+      var Link ={
+        SetColor : function(color) {
+          var j =0;
+          var select = document.querySelector('body');
+          var alist = document.querySelectorAll('a');
+          while(j < alist.length){
+          alist[j].style.color = color;
+          j++;}
+        }
+      }
+
+      function nightDay(self){
+
+      if(self.value === 'night') {
+          Body.SetBackgroundColor('black');
+          Body.SetColor('white');
+          self.value = 'day';
+          Link.SetColor('powderblue');
+        }
+      else {
+          Body.SetBackgroundColor('white');
+          Body.SetColor('black');
+          self.value = 'night';
+          Link.SetColor('blue');
+        }
+      }
+    </script>
+  </head>
+  <body>
+
+
+    <input id="night-day" type="button" value="night" onclick="
+          nightDay(this);
+      ">
+
+
+    <h1>loop & array</h1>
+    <script>
+      var coworkers = ['lee', 'phd', 'kim' ,'kan','kang','han','son','min'];
+    </script>
+    <h2>co workers</h2>
+    <ul>
+    <script>
+      var i =0;
+      while(i < coworkers.length){
+      document.write('<li><a href = "https://hpotter300.github.io/WEBn-1/"> '+ coworkers[i] + '</li>');
+      i++;
+      }
+    </script>
+    </ul>
+
+
+  </body>
+
+  </html>
